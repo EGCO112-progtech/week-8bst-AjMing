@@ -58,7 +58,7 @@ while(!inserted){
   	 
   }
    else{
-      
+
 	      /* move/ insert to the right*/
          if(t->rightPtr){
             t=t->rightPtr;
@@ -77,6 +77,20 @@ while(!inserted){
   }
   
 }//end function
+
+void treeOrder( TreeNodePtr treePtr ,int l)
+{ 
+   // if tree is not empty, then traverse
+   if ( treePtr != NULL ) {        
+        
+      treeOrder( treePtr->rightPtr,l+1 ); //Recursion to the left
+      int i;
+      for ( i=0;i<l;i++) printf("%3s","");
+      printf("%3d\n",treePtr->data) ;  //print the value 
+   
+      treeOrder( treePtr->leftPtr,l+1 ); //Recursion to the right
+   } // end if                          
+} // end 
 
 
 void inOrder( TreeNodePtr treePtr )
