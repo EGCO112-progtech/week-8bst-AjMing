@@ -58,6 +58,7 @@ while(!inserted){
   	 
   }
    else{
+      
 	      /* move/ insert to the right*/
          if(t->rightPtr){
             t=t->rightPtr;
